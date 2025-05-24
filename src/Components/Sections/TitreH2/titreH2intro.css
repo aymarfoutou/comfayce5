@@ -1,0 +1,18 @@
+section .container .headSection>h2{
+    font-size: 3.3rem;
+    font-family: 'lucida_handwritingitalic';
+    color: #f64542;
+    line-height: 100%;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  section .container .headSection>p {
+  font-size: 1.4rem;
+  line-height:1.9rem;;
+  text-align: center;
+  font-weight: 300;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}  
+  
+  

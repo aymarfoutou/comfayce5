@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description"
+    content="Comfayce est une agence de communication spécialisée dans la création visuelle, le développement web et le conseil en stratégie digitale." />
+  <meta name="description" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <meta name="Identifier-URL" content="http://www.comfayce.com" />
+  <meta name="Author" content="aymar FOUTOU KOMBO, CEO Comfayce" />
+  <meta name="robots" content="index, follow" />
+  <meta name="revisit-after" content="10" />
+  <meta name="Content-Language" content="french, français, fr" />
+  <title>Comyace - Agence digitale</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    let currentStep = 0;
+    const steps = document.querySelectorAll(".step");
+
+    function goToStep(index) {
+      steps.forEach((step, i) => {
+        if (i === index) {
+          step.classList.add("active");
+          step.style.display = "block";
+          void step.offsetWidth;
+          step.style.opacity = "1";
+        } else {
+          step.classList.remove("active");
+          step.style.opacity = "0";
+          setTimeout(() => step.style.display = "none", 500);
+        }
+      });
+      currentStep = index;
+    }
+
+    function nextStep() {
+      if (currentStep < steps.length - 1) {
+        goToStep(currentStep + 1);
+      }
+    }
+    function prevStep() {
+      if (currentStep > 0) {
+        goToStep(currentStep - 1);
+      }
+    }
+
+    function resetForm() {
+      const form = document.getElementById("formWizard");
+      form.reset();
+
+      // Clear selected states
+      document.querySelectorAll(".option-box").forEach(el => el.classList.remove("selected"));
+
+      // Clear hidden fields
+      ['selectedProjet', 'selectedFonctionnalites', 'selectedDesign', 'selectedDelai'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+
+      // Reset next buttons
+      ['btnNext1', 'btnNext2', 'btnNext3', 'btnVoirTarifs'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.disabled = true;
+      });
+
+      // Clear result
+      document.getElementById("tarifContainer").innerHTML = '';
+      document.getElementById("recapitulatif").innerHTML = '';
+      document.getElementById("result").innerHTML = '';
+
+      goToStep(0);
+    }
+
+    function showTarifs() {
+      goToStep(4);
+
+      const projet = document.getElementById('selectedProjet').value;
+      const options = document.getElementById('selectedFonctionnalites').value.split(',').filter(Boolean);
+      const design = document.getElementById('selectedDesign').value;
+      const delai = document.getElementById('selectedDelai').value;
+
+      document.getElementById("recapitulatif").innerHTML = `
+        <h4>Vos choix :</h4>
+        <ul>
+          <li><strong>Type de projet :</strong> ${projet}</li>
+          <li><strong>Fonctionnalités :</strong> ${options.length > 0 ? options.join(', ') : "Aucune"}</li>
+          <li><strong>Design :</strong> ${design}</li>
+          <li><strong>Délai :</strong> ${delai === "rapide" ? "1 semaine (express)" : "3 semaines"}</li>
+        </ul>
+      `;
+
+      let base = projet === "vitrine" ? 600 : projet === "ecommerce" ? 1200 : 2000;
+      let optionCost = options.length * 100;
+      let designCoef = design === "standard" ? 1 : design === "avance" ? 1.3 : 1.6;
+      let delaiCoef = delai === "rapide" ? 1.2 : 1;
+
+      const tarifs = [
+        { nom: "Essentiel", coef: 0.9, image: "https://files.muzli.cloud/ab8eefcab1cb07af89b79f1e64fbfb99.jpeg" },
+        { nom: "Standard", coef: 1, image: "https://files.muzli.cloud/5374ba83791d90f7219ddbbcebfc454e.jpeg" },
+        { nom: "Premium", coef: 1.3, image: "https://mir-s3-cdn-cf.behance.net/projects/404/689828201631163.Y3JvcCwzOTk5LDMxMjgsMCww.jpg" },
+      ];
+
+      const container = document.getElementById("tarifContainer");
+      container.innerHTML = "";
+
+      tarifs.forEach(t => {
+        const prix = (base + optionCost) * designCoef * delaiCoef * t.coef;
+        container.innerHTML += `
+          <div className="tarif-card">
+            <img src="${t.image}" alt="Image ${t.nom}">
+            <h4>${t.nom}</h4>
+            <p>Offre ${t.nom} selon vos besoins</p>
+            <strong>${prix.toFixed(2)} €</strong>
+          </div>
+        `;
+      });
+    }
+
+    function initFormWizard() {
+      goToStep(0);
+
+      document.querySelectorAll('#typeProjet .option-box').forEach(box => {
+        box.addEventListener('click', () => {
+          document.querySelectorAll('#typeProjet .option-box').forEach(b => b.classList.remove('selected'));
+          box.classList.add('selected');
+          document.getElementById('selectedProjet').value = box.dataset.value;
+          document.getElementById('btnNext1').disabled = false;
+        });
+      });
+
+      document.querySelectorAll('#fonctionnalites .option-box').forEach(box => {
+        box.addEventListener('click', () => {
+          box.classList.toggle('selected');
+          const selected = Array.from(document.querySelectorAll('#fonctionnalites .option-box.selected'))
+            .map(b => b.dataset.value);
+          document.getElementById('selectedFonctionnalites').value = selected.join(',');
+          document.getElementById('btnNext2').disabled = selected.length === 0;
+        });
+      });
+
+      document.querySelectorAll('#designNiveau .option-box').forEach(box => {
+        box.addEventListener('click', () => {
+          document.querySelectorAll('#designNiveau .option-box').forEach(b => b.classList.remove('selected'));
+          box.classList.add('selected');
+          document.getElementById('selectedDesign').value = box.dataset.value;
+          document.getElementById('btnNext3').disabled = false;
+        });
+      });
+
+      document.querySelectorAll('#delaiProjet .option-box').forEach(box => {
+        box.addEventListener('click', () => {
+          document.querySelectorAll('#delaiProjet .option-box').forEach(b => b.classList.remove('selected'));
+          box.classList.add('selected');
+          document.getElementById('selectedDelai').value = box.dataset.value;
+          document.getElementById('btnVoirTarifs').disabled = false;
+        });
+      });
+
+      document.querySelectorAll('button[onclick="restartForm()"]').forEach(btn => {
+        btn.addEventListener('click', resetForm);
+      });
+    }
+
+    // Formulaire : envoi avec Web3Forms
+    document.getElementById('formWizard').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const result = document.getElementById('result');
+      const formData = new FormData(this);
+      const json = JSON.stringify(Object.fromEntries(formData));
+      result.innerHTML = "Envoi en cours...";
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      })
+        .then(async res => {
+          const data = await res.json();
+          if (res.status === 200) {
+            result.innerHTML = "Message envoyé avec succès !";
+          } else {
+            result.innerHTML = "Erreur : " + data.message;
+          }
+        })
+        .catch(() => result.innerHTML = "Erreur lors de l'envoi.")
+        .finally(() => {
+          this.reset();
+          setTimeout(() => result.innerHTML = "", 3000);
+        });
+    });
+
+    initFormWizard();
+  </script>
+</body>
+
+</html>

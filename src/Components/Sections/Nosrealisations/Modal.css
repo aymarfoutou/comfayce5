@@ -1,0 +1,86 @@
+/* .modal-dialog .modal-dialog {
+    margin: 0;
+    height: 100%;
+    width: auto;
+  }
+
+  .modal-dialog  .modal-footer{
+    display: inline-block;
+  }
+  .modal-dialog .modal-content {
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-height: 100%;
+    padding: 1px 0;
+    text-align: center;
+      background-color: #f5f5f5;
+  }
+
+  .modal-dialog .modal-header {
+    border-bottom: none;
+    padding: 15px 0;
+    display: inline-block;
+  }
+  .modal-dialog .modal-content h3 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 0;
+      color: #f64542;
+  }
+  .modal-dialog .modal-content p {
+    margin-bottom: 30px;
+  }
+  .modal-dialog .modal-content p.item-intro {
+    margin: 20px 0 30px;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+  }
+  .modal-dialog .modal-content ul.list-inline {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  .modal-dialog .modal-content img {
+    margin-bottom: 30px;
+  }
+  .modal-dialog .close-modal {
+    position: absolute;
+    width: 66px;
+    height: auto;
+    background-color: transparent;
+    top: 16px;
+    right: 38px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .modal-dialog .close-modal:hover {
+    opacity: 0.3;
+  }
+  .modal-dialog .close-modal .lr {
+    height: 42px;
+    width: 1px;
+    margin-left: 35px;
+    background-color: #f64542;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+
+    -webkit-transform: rotate(45deg);
+
+    z-index: 1051;
+  }
+  .modal-dialog .close-modal .lr .rl {
+    height: 42px;
+    width: 1px;
+    background-color: #f64542;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+
+    -webkit-transform: rotate(90deg);
+
+    z-index: 1052;
+  }
+  .modal-dialog .modal-backdrop {
+    opacity: 0;
+    display: none;
+  } */

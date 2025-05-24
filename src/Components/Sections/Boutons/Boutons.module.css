@@ -1,0 +1,24 @@
+.btn{
+font-weight: 400;
+font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 16px;
+padding: 20px 44px;
+text-decoration: none;
+outline: none;
+border-radius: 50px;
+margin: 1rem auto 2rem;
+display: block;
+transition: all 0.3s ease 0s;
+max-width: max-content;
+}
+
+
+.btn-default{background-color: #241c43;color: #fff; border: 1px solid #241c43;}
+.btn-white{background-color: #fff; color: #241c43; border: 1px solid #241c43;}
+.btn-purpleghost{background-color:transparent;color: #241c43; border: 1px solid #241c43; }
+.btn-whiteghost{background-color:transparent; color: #fff; border: 1px solid #fff;}
+
+.btn-default:hover{background-color: #fff;color: #241c43; border: 1px solid #fff;}
+.btn-white:hover{background-color: #241c43; color: #241c43; border: 1px solid #241c43;}
+.btn-purpleghost:hover{background-color:#241c43;color: #fff; border: 1px solid #241c43; }
+.btn-whiteghost:hover{background-color:#fff; color: #241c43; border: 1px solid #fff;}

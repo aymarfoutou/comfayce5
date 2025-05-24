@@ -1,0 +1,112 @@
+
+/* vfx */
+.morph {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  }
+/* .morph:hover {
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
+}  */
+.containerPresta{
+  max-width: 1600px;
+}
+
+/* structure     */
+.allPresta{
+  margin: 80px auto 10px;
+  width: 64%;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.presta-card{
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+.cardTolink{
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+/* .cardTolink p{
+  text-decoration: none;
+  color: #333;
+} */
+
+.cardTolink:hover .presta-card {
+  background: #F9F8FD;
+  transition: all 0.3s ease 0s;
+}
+
+.cardTolink:hover img.morph{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.presta-card img.img-responsive {
+  display: block;
+  max-width:100%;
+  height: auto;
+  margin:0 auto;
+  width: 190px;
+  /* max-width:228px;
+  height: 229px; */
+  border-radius: 100%;
+}
+  .presta-card h3.service-heading {
+    margin: 15px 0 0;
+    text-transform: none;
+      color: #382778;
+      font-size: 32px;
+      font-weight: normal;
+      font-family: 'lucida_handwritingitalic';
+  }
+
+  /* .presta-card p {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    padding: 6px 0;
+    min-height: 6rem;
+} */
+
+
+
+
+/* .presta-card .btn.ghost:hover {
+  color: #fff;
+  background-color: #241c43;
+  text-decoration: none;
+  outline: none;
+} */
+
+/* Over combiné*/
+.cardTolink:hover .btn.ghost{
+  color: #fff;
+  background-color: #241c43;
+  text-decoration: none;
+  outline: none;
+}
+
+.cardTolink:hover ._btn-purpleghost_m1x3i_18{
+  color: #fff;
+  background-color: #241c43;
+  text-decoration: none;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+.quiSommesnous h3.nous-heading {
+    margin: 15px 0;
+    text-transform: none;
+    color: #382778;
+    font-size: 32px;
+    font-weight: normal;
+    font-family: 'lucida_handwritingitalic';
+}
+
+/* .quiSommesnous p {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    line-height: auto;
+    padding: 16px 0;
+    min-height: 6rem;
+    font-weight: 300;
+    margin-bottom: 0;
+} */
+
+/* .quiSommesnous p {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+} */
+.quiSommesnous .grey {
+    background: #f5f5fa;
+    border-radius: 1rem;
+    margin: 90px auto;
+}
+
+.f-r{float: right;}
+.f-r-txt{text-align:right;}
+.quiSommesnous .w-separation.w-first{margin-bottom:6rem;}

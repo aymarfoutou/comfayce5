@@ -1,0 +1,106 @@
+.allReal{
+    margin: 80px auto 10px;
+    width: 64%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.real-card{
+    flex-basis: 31%;
+    text-align: center;
+    background-color: #f9f7fe;
+    padding: 1.5rem;
+    border-radius: 50px;
+}
+
+.portfolio-item{margin: 0 0.5rem 1rem;}
+
+.containerCustom{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.portfolio-item .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+}
+
+.portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    /* border: 6px solid #fff; */
+}
+.portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: transparent;
+    text-align: left;
+    padding: 14px 10px 25px;
+}
+.portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    color: white;
+}
+
+.group {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+.portfolio-item h3.client {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size:0.9rem;
+    margin: 0;
+    color: #454448;
+}
+.portfolio-item .portfolio-caption p {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    color:#343336;
+    /*color: #9d9c9f;*/
+}
+
+.portfolio-item .portfolio-link .portfolio-hover {
+    background: #241c43;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    border-radius: 10px;
+}
+
+.portfolio-item .portfolio-link .portfolio-hover:hover {
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.enSavoirPlus {
+    width: 140px;
+    margin: 0 auto;
+    padding: 13px 10px;
+    border: 1px solid #fff;
+    /* font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
+.enSavoirPlus:hover {
+    margin: 0 auto;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #241c43;
+}
+

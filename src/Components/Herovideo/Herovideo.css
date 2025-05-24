@@ -1,0 +1,23 @@
+video {
+    object-fit: cover;
+  }
+
+  .purple{
+    background: linear-gradient(#2c156b, #0b05fa7d)
+  }
+  .btnCustom {
+    font-weight: 400;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 24px 50px;
+    text-decoration: none;
+    outline: none;
+    border-radius: 50px;
+    margin: 0 auto 14px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    max-width: max-content;
+    background: #fff;
+    text-decoration: none;
+    color: #241c43
+}

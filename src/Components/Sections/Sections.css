@@ -1,0 +1,82 @@
+
+
+
+section .imgbox{max-width:100%; width:100%;}
+
+section .container .headSection{margin: 0 auto 4rem;}
+
+section .align-items-center.w-separation{padding:20px;}
+
+.btnCustom{
+  font-weight: 400;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding: 24px 50px;
+  text-decoration: none;
+  outline: none;
+  border-radius: 50px;
+  margin: 0 auto 14px;
+  display: block;
+  transition: all 0.3s ease 0s;
+  max-width: max-content;
+}
+
+section .btn.ghost{
+  color: #241c43;
+  background-color: transparent;
+  border: 1px solid #241c43;
+
+}
+section .btn.ghost:hover {
+  color: #fff;
+  background-color: #241c43;
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+
+section .btnCustom.ghostClear{
+  color: #241c43;
+  background-color: #fff;
+  border: 1px solid #241c43;
+
+}
+section .btnCustom.ghostClear:hover {
+  color: #fff;
+  background-color: #241c43;
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+
+section .btn.full{
+  color: #fff;
+  background-color: #241c43;
+  border: 1px solid #241c43;
+}
+section .btn.full:hover {
+  color: #fff;
+  background-color: #241c43;
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+
+.btn{
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+}
+
+
+
+
+
+section#nosPrestations, section#nosRealisations, section#quiSommesnous,  section#nousContacter
+{padding: 8rem 0;}
+
+section#nosRealisations
+{background-color:#ece8f4;/* background: url(../../../src/assets/images/bgcontact.jpg) repeat;*/}
+
+section#nousContacter p, #nousContacter h3 {
+  color: #fff!important;
+}
+section#nousContacter
+{background-color:#241c43; }
+
+section#piedsDepage{padding: 2rem 0;}

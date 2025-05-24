@@ -1,0 +1,41 @@
+.global-link{text-decoration: none;}
+a.global-link{z-index: 1000;}
+.global-link{
+    display: block;
+    max-width: 345px;
+    margin: auto;
+}
+
+.global-link .btn {
+    color: #241c43;
+    background-color: transparent;
+    font-weight: 400;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 16px 40px;
+    text-decoration: none;
+    outline: none;
+    border: 1px solid #241c43;
+    border-radius: 50px;
+    margin: 0 auto 14px;
+    display: block;
+    max-width: 100%
+    transition: all 0.3s ease 0s;
+}
+
+.mycard{border-radius: 50px; padding: 2rem; text-align: center;}
+
+.global-link p.lead{text-decoration: none; color:#333;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300; line-height: normal; margin: 22px 0;
+}
+
+img.imgbox{transition: all 0.3s ease-in-out;}
+
+.global-link:hover .imgbox{transform: scale(1.1); transition: all 0.3s ease-in-out;}
+.global-link:hover .btn{background-color:#241c43; color: #fff;}
+.global-link:hover .mycard{
+    background: #F9F8FD;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+}
